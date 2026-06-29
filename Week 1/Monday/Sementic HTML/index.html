@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sementic HTML</title>
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #parent-panel {
+            display: flex;
+            height: 100vh;
+        }
+
+        #left-panel {
+            /* border: 2px solid black; */
+            height: 100vh;
+            width: 100%;
+            flex: 1;
+            overflow-y: auto;
+            padding: 7px;
+            background-color: black;
+            color: white;
+        }
+
+        #right-panel {
+            /* border: 2px solid black; */
+            height: 100vh;
+            width: 100%;
+            flex: 3;
+            overflow: auto;
+            padding: 7px;
+            background-color: #212529;
+            color: #DEE2E6;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- <header>Interested in a
+            <a href="#certification">verified certificate or a professional certificate?</a>
+        </header> -->
+
+        <section id="parent-panel">
+            <div id="left-panel">
+                <aside>
+                    <h1 id="course-title">CS50’s Introduction to Programming with Python</h1>
+                    <p id="instructor-name">David J. Malan</p>
+                    <p id="instructor-mail">malan@harvard.edu</p>
+                    <hr>
+
+                    <p>CS50x Puzzle Day</p>
+                    <p>Zoom Meetings</p>
+                    <hr>
+
+                    <p>CS50.ai</p>
+                    <p>Visual Studio Code</p>
+                    <hr>
+
+                    <p>0. Introduction to Python</p>
+                    <p>1. Conditionals</p>
+                    <p>2. Loops</p>
+                    <p>3. Exceptions</p>
+                    <p>4. Libraries</p>
+                    <p>5. Unit Tests</p>
+                    <p>6. File I/O</p>
+                    <p>7. Regular Expressions</p>
+                    <p>8. Object Oriented Programming</p>
+                </aside>
+            </div>
+
+            <div id="right-panel">
+                <section class="welcome ">
+                    <h1>Welcome</h1>
+                    <hr>
+
+                    <p id="welcome-paragraph">
+                        An introduction to programming using a language called Python. Learn how to read and write code
+                        as well
+                        as how to test and “debug” it. Designed for students with or without prior programming
+                        experience who’d
+                        like to learn Python specifically. Learn about functions, arguments, and return values (oh my!);
+                        variables and types; conditionals and Boolean expressions; and loops. Learn how to handle
+                        exceptions,
+                        find and fix bugs, and write unit tests; use third-party libraries; validate and extract data
+                        with
+                        regular expressions; model real-world entities with classes, objects, methods, and properties;
+                        and read
+                        and write files. Hands-on opportunities for lots of practice. Exercises inspired by real-world
+                        programming problems. No software required except for a web browser, or you can write code on
+                        your own
+                        PC or Mac. <br><br>
+
+                        Whereas CS50x itself focuses on computer science more generally as well as programming with C,
+                        Python,
+                        SQL, and JavaScript, this course, aka CS50P, is entirely focused on programming with Python. You
+                        can
+                        take CS50P before CS50x, during CS50x, or after CS50x. But for an introduction to computer
+                        science
+                        itself, you should still take CS50x!
+                    </p>
+                </section>
+                <section id="certification">
+                    <h1>How to take this course</h1>
+                    <hr>
+                    <p>Even if you are not a student at Harvard, you are welcome to “take” this course for free via this
+                        OpenCourseWare by working your way through the course’s ten weeks of material. For each week,
+                        follow
+                        this workflow:
+                    </p>
+
+                    <img src="work-flow.png" alt="certification work-flow img" width="200px" height="200px">
+                </section>
+
+                <section id="teaching-course">
+                    <h1>How to Teach this Course</h1>
+                    <hr>
+                    <p>If you are a teacher, you are welcome to adopt or adapt these materials for your own course, per
+                        the license. Additionally, we encourage teachers to participate in the CS50 Educator Workshop to
+                        learn more about CS50’s curriculum, technology, and pedagogy.</p>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
