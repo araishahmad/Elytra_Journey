@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="nav-bar">
+        <div id="name-logo">
+            <img src="assets/elytra_studios_logo.jpg" alt="elytra_studios_logo" width="35px">
+            <h1>Elytra Studios</h1>
+        </div>
+
+        <div id="references">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#footer">Contact Us</a>
+            <a href="mailto:elytrastudios@nexentrasolutions.tech">Book a call</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div id="hero-text">
+                <h1>Step Into the Future of Business</h1>
+            </div>
+            <div id="hero-para">
+                <p>AR and VR aren't just future tech — they're tools that are reshaping how businesses engage, train,
+                    and grow.
+                    From immersive product demos to hands-on training simulations, we design experiences tailored to
+                    your
+                    industry.
+                    Every solution we build is custom, scalable, and made to grow with your business — from initial
+                    concept all
+                    the way through deployment</p>
+            </div>
+        </section>
+
+        <section id="projects-container">
+            <h1 id="projects-heading">Projects</h1>
+            <section id="projects">
+                <!-- Converted all container images from PNG to webP format for optimization -->
+                <div class="containers"
+                    style="background-image: url('assets/Expense_Tracker.webp'); background-size: cover; position: center;">
+                    <h2>SplitWise</h2>
+                    <details>
+                        <summary>SplitWise is a shared expense tracking application designed to help users manage and
+                            split
+                            expenses among friends, roommates, or groups. The application allows users to record
+                            expenses,
+                            calculate individual shares, and keep track of balances in a clear and organized way. The
+                            goal
+                            of this project is to simplify expense management and avoid confusion in shared spending.
+                        </summary>
+                    </details>
+
+                    <a href="https://github.com/araishahmad/SplitWise-SharedExpenseTracker" target="_blank"
+                        rel="noopnner norefferer">Visit on Github</a>
+                </div>
+                <div class="containers"
+                    style="background-image: url('assets/Speech_Emotion_Recognition.webp'); background-size: cover; position: center;">
+                    <h2>Speech Emotion Recognition</h2>
+                    <details>
+                        <summary>Speech Emotion Recognition System used to break down audio in chunks to study its wave
+                            patterns and predict the emotion
+
+                            Dataset is available on Kaggle. Instead of it any other dataset can be used based on self
+                            preferrence.</summary>
+                    </details>
+
+                    <a href="https://github.com/araishahmad/Speech-Emotion-Recognition" target="_blank"
+                        rel="noopnner norefferer">Visit on Github</a>
+                </div>
+                <div class="containers"
+                    style="background-image: url('assets/Expense_Tracker.webp'); background-size: cover; position: center;">
+                    <h2>NYC Taxi Warehouse</h2>
+                    <details>
+                        <summary>A end-to-end big data pipeline built with the Hadoop ecosystem that ingests, processes,
+                            and
+                            analyzes NYC TLC taxi trip records for fare prediction, hotspot mapping, and driver
+                            performance
+                            analytics.This project builds a fully functional data warehouse using real NYC government
+                            taxi
+                            data — over 3 million trip records from January 2023 alone.
+                        </summary>
+                    </details>
+
+                    <a href="https://github.com/araishahmad/nyc-taxi-warehouse" target="_blank"
+                        rel="noopnner norefferer">Visit on Github</a>
+                </div>
+            </section>
+        </section>
+
+        <section id="about">
+            <div id="about-text">
+                <h1>About Us</h1>
+            </div>
+            <div id="about-para">
+                <p>Elytra Studios is a team of designers and developers passionate about
+                    immersive technology. We specialize in building AR and VR
+                    experiences that help businesses train smarter, showcase products
+                    more effectively, and engage customers in ways traditional media
+                    can't match. Founded on the belief that emerging tech should be
+                    accessible, we partner closely with each client to turn ambitious
+                    ideas into scalable, real-world solutions.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div id="footer-container">
+            <a href="#nav-bar">Elytra Studios</a>
+            <a href="mailto:elytrastuios@nexentrasolutions.com">elytrastudios@nexentrasolutions.com</a>
+            <a href="https://www.google.com/maps/dir//Elytra+Studios,+69B,+Ameer+Chowk,+Staff,+Colony+Block+B+PCSIR,+Lahore,+54700,+Pakistan/@31.4399951,74.2981489,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3919053506e5a98d:0xb3e4c9b883e0ecb3!2m2!1d74.2892055!2d31.4319809?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank" rel="noopener noreferrer">69B, Ameer Chowk, Staff, Colony Block B PCSIR, Lahore,
+                54700</a>
+            <div id="footer-bottom">
+                <p>&copy; 2026 Elytra Studios. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        console.log('Script running');
+        if ('serviceWorker' in navigator){
+            window.addEventListener('load', ()=>{
+                navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('SW Registered:', reg))
+                .catch(err => console.log('SW Registration failed:', err))
+            });
+        }
+    </script>
+</body>
+
+</html>
