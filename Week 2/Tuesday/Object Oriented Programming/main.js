@@ -1,8 +1,12 @@
 const Animal = require('./Animal');
 const BankAccount = require('./BankAccount');
+const Cat = require('./Cat')
 
-const cat = new Animal('Koko', 'RagDoll');
-console.log(cat.meow());
+const animal = new Animal ('Jackie', 'Husky');
+console.log(animal.intro());
+
+const cat = new Cat('Koko', 'RagDoll', 'Meow Meow');
+console.log(cat.intro());
 
 const account = new BankAccount('Araish', 33);
 

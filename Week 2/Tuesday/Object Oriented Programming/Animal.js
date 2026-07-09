@@ -4,7 +4,7 @@ class Animal {
         this.breed = breed;
     }
 
-    meow() {
+    intro() {
         return `My name is ${this.name} and I'm from ${this.breed} breed`;
     }
 }
