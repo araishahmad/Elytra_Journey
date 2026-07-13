@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: #f4f5f7;
+    color: #1f2328;
+}
+
+#nav-bar {
+    background: #2f6fed;
+    padding: 16px 20px;
+}
+
+#nav-bar h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+main {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+}
+
+.expenses-window {
+    background: #fff;
+    border: 1px solid #e2e4e8;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.05rem;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+input {
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    background: #2f6fed;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 16px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #245bc7;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+.balance {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+.warning {
+    color: #b42318;
+    font-weight: 600;
+    background: #fee4e2;
+    border-radius: 6px;
+    padding: 6px 10px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.error {
+    color: #b42318;
+    font-size: 0.85rem;
+    min-height: 1em;
+}
+
+.offline-banner {
+    color: #92400e;
+    background: #fef3c7;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+.sync-status {
+    color: #555;
+    font-size: 0.8rem;
+    margin: -8px 0 12px;
+}
+
+#expenses-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#expenses-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.92rem;
+}
+
+#expenses-list li:last-child {
+    border-bottom: none;
+}
+
+#expenses-list li.empty {
+    color: #888;
+    font-style: italic;
+}

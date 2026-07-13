@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="nav-bar">
+        <h1 id="name"></h1>
+    </header>
+
+    <main>
+        <div class="expenses-window"></div>
+    </main>
+
+    <script src="Expense.js"></script>
+    <script src="ExpenseManagement.js"></script>
+    <script src="storageService.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+        console.log('Script running');
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('SW Registered:', reg))
+                    .catch(err => console.log('SW Registration failed:', err));
+            });
+        }
+    </script>
+</body>
+
+</html>

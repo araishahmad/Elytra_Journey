@@ -1,6 +1,4 @@
-// `Expense` doesn't need to be required here — expense.js is loaded first via
-// <script> in index.html, so its top-level `class Expense` is already
-// available as a global by the time this script runs.
+const Expense = require('./expense');
 
 class ExpenseManagement {
     constructor(budget, userName) {
@@ -29,10 +27,6 @@ class ExpenseManagement {
         return this._budget - totalSpent;
     }
 
-    isOverBudget (){
-        return this.remainingBalance < 0;
-    }
-
     addExpense(category, amount) {
         const newExpense = new Expense(category, amount);
         this.expenses.push(newExpense);
@@ -51,7 +45,7 @@ class ExpenseManagement {
         const newExpenses = [];
         for (let i = 0; i < this.expenses.length; i++){
             if (index !== i)
-                newExpenses.push(this.expenses[i]); // This can also be performed using slicing
+                newExpenses.push(this.expenses[i]); // This can also be performed using slicing 
         }
         this.expenses = newExpenses;
 
@@ -66,7 +60,4 @@ class ExpenseManagement {
     }
 }
 
-// Works both in Node (require/module.exports) and in the browser (global `ExpenseManagement`).
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = ExpenseManagement;
-}
+module.exports = ExpenseManagement;

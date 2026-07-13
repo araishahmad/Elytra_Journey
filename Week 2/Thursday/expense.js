@@ -31,6 +31,4 @@ class Expense {
     }
 }
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = Expense;
-}
+module.exports = Expense;
