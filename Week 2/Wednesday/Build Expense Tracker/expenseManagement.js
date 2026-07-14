@@ -9,7 +9,7 @@ class ExpenseManagement {
         this._budget = budget;
         this.expenses = [];
     }
-
+    
     get _budget() {
         return this.budget;
     }
