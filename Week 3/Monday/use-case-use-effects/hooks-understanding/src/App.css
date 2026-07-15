@@ -1,0 +1,53 @@
+.toggle-bar {
+  margin: 10px;
+  background-color: black;
+  height: 100px;
+  width: 200px;
+  border-radius: 50px;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-circle {
+  margin-left: 20px;
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  border-radius: 50px;
+  transition: margin-left 0.3s ease;
+}
+
+.toggle-bar.on {
+  background-color: green;
+}
+
+.toggle-bar.on .toggle-circle {
+  margin-left: 120px;
+}
+
+.form-container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 250px;
+}
+
+.form-container input {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: black;
+}
+
+.form-container p {
+  font-weight: bold;
+}

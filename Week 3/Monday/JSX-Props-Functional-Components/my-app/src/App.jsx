@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
-import avatarImg from './avatar.png'
-import Badge from '@mui/material/Badge';
+import avatarImg from './avatar.png';
 import Verification from '@mui/icons-material/Verified';
 
 // Creating a button
@@ -35,7 +34,7 @@ function MyCard() {
     return (
         <section className="cards-container">
             <div className="cards">
-                <h1 className="hero-name" style={{display: "flex", alignItems: "center"}}>{user.name}
+                <h1 className="hero-name" style={{ display: "flex", alignItems: "center" }}>{user.name}
                     <Verification sx={{ color: '#1DA1F2', fontSize: 20 }} />
                 </h1>
                 <h2 className="hero-info">{user.roll_No}</h2>
@@ -47,21 +46,21 @@ function MyCard() {
     );
 }
 
-function MyAvatar (){
+function MyAvatar() {
     return (
-        <img 
-        className="avatar"
-        src={user.avatar}
-        alt={'Profile photo of ' + user.name}
-        style={{
-            width: user.avatar_size,
-            height: user.avatar_size
-        }}
+        <img
+            className="avatar"
+            src={user.avatar}
+            alt={'Profile photo of ' + user.name}
+            style={{
+                width: user.avatar_size,
+                height: user.avatar_size
+            }}
         />
     );
 }
 
-function MyPriceTag (){
+function MyPriceTag() {
     return (
         <div className="price-tag">
             <h1>Price: $82</h1>
