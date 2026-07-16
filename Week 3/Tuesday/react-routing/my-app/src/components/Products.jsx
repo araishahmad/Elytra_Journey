@@ -1,0 +1,7 @@
+const Products = [
+  { id: '1', name: 'Widget', price: 9.99 },
+  { id: '2', name: 'Gadget', price: 19.99 },
+  { id: '3', name: 'Gizmo', price: 29.99 },
+];
+
+export default Products;
