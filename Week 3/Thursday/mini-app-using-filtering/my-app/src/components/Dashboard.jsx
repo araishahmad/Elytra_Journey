@@ -1,4 +1,3 @@
-// src/components/Dashboard.jsx
 import React from 'react';
 import { useState, useEffect, useMemo } from 'react';
 import '../App.css';
@@ -31,7 +30,7 @@ const Dashboard = () => {
     const [category, setCategory] = useState('all');
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/todos?_limit=15')
+        fetch('https://jsonplaceholder.typicode.com/todos')
             .then(response => {
                 if (!response.ok)
                     throw new Error(`Request failed due to ${response.status}`);
