@@ -2,9 +2,13 @@ import postService from '../service/postsService';
 import { useState } from 'react';
 import userService from '../service/usersService';
 import useFetch from '../hooks/useFetch';
+import { useDebounce } from '../hooks/useDebounce';
 
 const Dashboard = () => {
     const [view, setView] = useState('posts');
+    const [search, setSearch] = useState('');
+
+    const debounceValue = useDebounce(search, 500);
 
     const {data: posts, loading: postsLoading, error: postsError} = useFetch(postService.getAll);
     const {data: users, loading: usersLoading, error: usersError} = useFetch(userService.getAll);
@@ -19,6 +23,12 @@ const Dashboard = () => {
         <p>Failed to fetch data due to: {error}</p>
     </div>
 
+    let postsFiltered, usersFiltered;
+    if (view === 'posts')
+        postsFiltered = posts.filter((p) => p.title.toLowerCase().includes(debounceValue));
+    else if (view === 'users')
+        usersFiltered = users.filter((u) => u.name.toLowerCase().includes(debounceValue));
+
     return (
         <>
             <div className='toggle-btns'>
@@ -26,8 +36,12 @@ const Dashboard = () => {
                 <button onClick={() => setView('users')}>View Users</button>
             </div>
 
+            <div className='search-bar'>
+                <input type="text" value={search} onChange={(e) => setSearch(e.target.value)}/>
+            </div>
+
             <section className='cards-container'>
-                {view === 'posts' && posts.map((p) =>
+                {view === 'posts' && postsFiltered.map((p) =>
                     <div className="cards" key={p.id}>
                         <h3>{p.title}</h3>
                         <p><b>ID:</b>{p.userId}</p>
@@ -35,7 +49,7 @@ const Dashboard = () => {
                     </div>
                 )}
 
-                {view === 'users' && users.map((u) =>
+                {view === 'users' && usersFiltered.map((u) =>
                     <div className="cards" key={u.id}>
                         <h3>{u.name}</h3>
                         <p><b>Email:</b> {u.email}</p>
