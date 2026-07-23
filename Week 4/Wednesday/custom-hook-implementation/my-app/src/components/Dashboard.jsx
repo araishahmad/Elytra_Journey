@@ -19,7 +19,7 @@ const Dashboard = () => {
     </div>
 
     const error = postsError || usersError;
-    if (postsError || usersError) return <div className='pop-up'>
+    if (error) return <div className='pop-up'>
         <p>Failed to fetch data due to: {error}</p>
     </div>
 
